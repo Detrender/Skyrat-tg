@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;robots.dm - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/robots.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/robots.dm 
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_STEP_DELAY">BOT_STEP_DELAY</a></th><td>Delay between movemements</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_STEP_MAX_RETRIES">BOT_STEP_MAX_RETRIES</a></th><td>Maximum times a bot will retry to step from its position</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/DEFAULT_SCAN_RANGE">DEFAULT_SCAN_RANGE</a></th><td>Default view range for finding targets.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_IDLE">BOT_IDLE</a></th><td>Idle</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_HUNT">BOT_HUNT</a></th><td>Found target, hunting</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_TIPPED">BOT_TIPPED</a></th><td>Currently tipped over.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_START_PATROL">BOT_START_PATROL</a></th><td>Start patrol</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_PATROL">BOT_PATROL</a></th><td>Patrolling</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_SUMMON">BOT_SUMMON</a></th><td>Summoned to a location</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_MOVING">BOT_MOVING</a></th><td>Currently moving</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_PREP_ARREST">BOT_PREP_ARREST</a></th><td>Secbot - At target, preparing to arrest</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_ARREST">BOT_ARREST</a></th><td>Secbot - Arresting target</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_CLEANING">BOT_CLEANING</a></th><td>Cleanbot - Cleaning</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_SHOWERSTANCE">BOT_SHOWERSTANCE</a></th><td>Hygienebot - Cleaning unhygienic humans</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_REPAIRING">BOT_REPAIRING</a></th><td>Floorbots - Repairing hull breaches</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_HEALING">BOT_HEALING</a></th><td>Medibots - Healing people</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_RESPONDING">BOT_RESPONDING</a></th><td>Responding to a call from the AI</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_DELIVER">BOT_DELIVER</a></th><td>MULEbot - Moving to deliver</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_GO_HOME">BOT_GO_HOME</a></th><td>MULEbot - Returning to home</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_BLOCKED">BOT_BLOCKED</a></th><td>MULEbot - Blocked</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_NAV">BOT_NAV</a></th><td>MULEbot - Computing navigation</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_WAIT_FOR_NAV">BOT_WAIT_FOR_NAV</a></th><td>MULEbot - Waiting for nav computation</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BOT_NO_ROUTE">BOT_NO_ROUTE</a></th><td>MULEbot - No destination beacon found (or no route)</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/SEC_BOT">SEC_BOT</a></th><td>Secutritrons (Beepsky) and ED-209s</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/MULE_BOT">MULE_BOT</a></th><td>MULEbots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/FLOOR_BOT">FLOOR_BOT</a></th><td>Floorbots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/CLEAN_BOT">CLEAN_BOT</a></th><td>Cleanbots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/MED_BOT">MED_BOT</a></th><td>Medibots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/HONK_BOT">HONK_BOT</a></th><td>Honkbots &amp; ED-Honks</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/FIRE_BOT">FIRE_BOT</a></th><td>Firebots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/HYGIENE_BOT">HYGIENE_BOT</a></th><td>Hygienebots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/VIBE_BOT">VIBE_BOT</a></th><td>Vibe bots</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/NEW_BORG">NEW_BORG</a></th><td>Alert when a new Cyborg is created.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/NEW_MODEL">NEW_MODEL</a></th><td>Alert when a Cyborg selects a model.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/RENAME">RENAME</a></th><td>Alert when a Cyborg changes their name.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/AI_SHELL">AI_SHELL</a></th><td>Alert when an AI disconnects themselves from their shell.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/DISCONNECT">DISCONNECT</a></th><td>Alert when a Cyborg gets disconnected from their AI.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_LAMP_CD_RESET">BORG_LAMP_CD_RESET</a></th><td>Special value to reset cyborg's lamp_cooldown</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_MODULE_THREE_DISABLED">BORG_MODULE_THREE_DISABLED</a></th><td>The third module slots is disabed.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_MODULE_TWO_DISABLED">BORG_MODULE_TWO_DISABLED</a></th><td>The second module slots is disabed.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_MODULE_ALL_DISABLED">BORG_MODULE_ALL_DISABLED</a></th><td>All modules slots are disabled.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_CHOOSE_MODULE_ONE">BORG_CHOOSE_MODULE_ONE</a></th><td>First Borg module slot.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_CHOOSE_MODULE_TWO">BORG_CHOOSE_MODULE_TWO</a></th><td>Second Borg module slot.</td></tr>
+        <tr><th><a href="code/__DEFINES/robots.html#define/BORG_CHOOSE_MODULE_THREE">BORG_CHOOSE_MODULE_THREE</a></th><td>Third Borg module slot.</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/AI_SHELL"><aside class="declaration">#define </aside>AI_SHELL
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 89"/></a>
+    </h3>
+    <p>Alert when an AI disconnects themselves from their shell.</p><h3 id="define/BORG_CHOOSE_MODULE_ONE"><aside class="declaration">#define </aside>BORG_CHOOSE_MODULE_ONE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L113">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 113"/></a>
+    </h3>
+    <p>First Borg module slot.</p><h3 id="define/BORG_CHOOSE_MODULE_THREE"><aside class="declaration">#define </aside>BORG_CHOOSE_MODULE_THREE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L117">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 117"/></a>
+    </h3>
+    <p>Third Borg module slot.</p><h3 id="define/BORG_CHOOSE_MODULE_TWO"><aside class="declaration">#define </aside>BORG_CHOOSE_MODULE_TWO
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L115">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 115"/></a>
+    </h3>
+    <p>Second Borg module slot.</p><h3 id="define/BORG_LAMP_CD_RESET"><aside class="declaration">#define </aside>BORG_LAMP_CD_RESET
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L101">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 101"/></a>
+    </h3>
+    <p>Special value to reset cyborg's lamp_cooldown</p><h3 id="define/BORG_MODULE_ALL_DISABLED"><aside class="declaration">#define </aside>BORG_MODULE_ALL_DISABLED
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L109">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 109"/></a>
+    </h3>
+    <p>All modules slots are disabled.</p><h3 id="define/BORG_MODULE_THREE_DISABLED"><aside class="declaration">#define </aside>BORG_MODULE_THREE_DISABLED
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L105">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 105"/></a>
+    </h3>
+    <p>The third module slots is disabed.</p><h3 id="define/BORG_MODULE_TWO_DISABLED"><aside class="declaration">#define </aside>BORG_MODULE_TWO_DISABLED
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L107">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 107"/></a>
+    </h3>
+    <p>The second module slots is disabed.</p><h3 id="define/BOT_ARREST"><aside class="declaration">#define </aside>BOT_ARREST
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 37"/></a>
+    </h3>
+    <p>Secbot - Arresting target</p><h3 id="define/BOT_BLOCKED"><aside class="declaration">#define </aside>BOT_BLOCKED
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 53"/></a>
+    </h3>
+    <p>MULEbot - Blocked</p><h3 id="define/BOT_CLEANING"><aside class="declaration">#define </aside>BOT_CLEANING
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 39"/></a>
+    </h3>
+    <p>Cleanbot - Cleaning</p><h3 id="define/BOT_DELIVER"><aside class="declaration">#define </aside>BOT_DELIVER
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L49">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 49"/></a>
+    </h3>
+    <p>MULEbot - Moving to deliver</p><h3 id="define/BOT_GO_HOME"><aside class="declaration">#define </aside>BOT_GO_HOME
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 51"/></a>
+    </h3>
+    <p>MULEbot - Returning to home</p><h3 id="define/BOT_HEALING"><aside class="declaration">#define </aside>BOT_HEALING
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 45"/></a>
+    </h3>
+    <p>Medibots - Healing people</p><h3 id="define/BOT_HUNT"><aside class="declaration">#define </aside>BOT_HUNT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 23"/></a>
+    </h3>
+    <p>Found target, hunting</p><h3 id="define/BOT_IDLE"><aside class="declaration">#define </aside>BOT_IDLE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 21"/></a>
+    </h3>
+    <p>Idle</p><h3 id="define/BOT_MOVING"><aside class="declaration">#define </aside>BOT_MOVING
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 33"/></a>
+    </h3>
+    <p>Currently moving</p><h3 id="define/BOT_NAV"><aside class="declaration">#define </aside>BOT_NAV
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L55">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 55"/></a>
+    </h3>
+    <p>MULEbot - Computing navigation</p><h3 id="define/BOT_NO_ROUTE"><aside class="declaration">#define </aside>BOT_NO_ROUTE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 59"/></a>
+    </h3>
+    <p>MULEbot - No destination beacon found (or no route)</p><h3 id="define/BOT_PATROL"><aside class="declaration">#define </aside>BOT_PATROL
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 29"/></a>
+    </h3>
+    <p>Patrolling</p><h3 id="define/BOT_PREP_ARREST"><aside class="declaration">#define </aside>BOT_PREP_ARREST
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 35"/></a>
+    </h3>
+    <p>Secbot - At target, preparing to arrest</p><h3 id="define/BOT_REPAIRING"><aside class="declaration">#define </aside>BOT_REPAIRING
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L43">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 43"/></a>
+    </h3>
+    <p>Floorbots - Repairing hull breaches</p><h3 id="define/BOT_RESPONDING"><aside class="declaration">#define </aside>BOT_RESPONDING
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 47"/></a>
+    </h3>
+    <p>Responding to a call from the AI</p><h3 id="define/BOT_SHOWERSTANCE"><aside class="declaration">#define </aside>BOT_SHOWERSTANCE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 41"/></a>
+    </h3>
+    <p>Hygienebot - Cleaning unhygienic humans</p><h3 id="define/BOT_START_PATROL"><aside class="declaration">#define </aside>BOT_START_PATROL
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 27"/></a>
+    </h3>
+    <p>Start patrol</p><h3 id="define/BOT_STEP_DELAY"><aside class="declaration">#define </aside>BOT_STEP_DELAY
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 12"/></a>
+    </h3>
+    <p>Delay between movemements</p><h3 id="define/BOT_STEP_MAX_RETRIES"><aside class="declaration">#define </aside>BOT_STEP_MAX_RETRIES
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 14"/></a>
+    </h3>
+    <p>Maximum times a bot will retry to step from its position</p><h3 id="define/BOT_SUMMON"><aside class="declaration">#define </aside>BOT_SUMMON
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 31"/></a>
+    </h3>
+    <p>Summoned to a location</p><h3 id="define/BOT_TIPPED"><aside class="declaration">#define </aside>BOT_TIPPED
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 25"/></a>
+    </h3>
+    <p>Currently tipped over.</p><h3 id="define/BOT_WAIT_FOR_NAV"><aside class="declaration">#define </aside>BOT_WAIT_FOR_NAV
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L57">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 57"/></a>
+    </h3>
+    <p>MULEbot - Waiting for nav computation</p><h3 id="define/CLEAN_BOT"><aside class="declaration">#define </aside>CLEAN_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 69"/></a>
+    </h3>
+    <p>Cleanbots</p><h3 id="define/DEFAULT_SCAN_RANGE"><aside class="declaration">#define </aside>DEFAULT_SCAN_RANGE
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 17"/></a>
+    </h3>
+    <p>Default view range for finding targets.</p><h3 id="define/DISCONNECT"><aside class="declaration">#define </aside>DISCONNECT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L91">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 91"/></a>
+    </h3>
+    <p>Alert when a Cyborg gets disconnected from their AI.</p><h3 id="define/FIRE_BOT"><aside class="declaration">#define </aside>FIRE_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 75"/></a>
+    </h3>
+    <p>Firebots</p><h3 id="define/FLOOR_BOT"><aside class="declaration">#define </aside>FLOOR_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L67">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 67"/></a>
+    </h3>
+    <p>Floorbots</p><h3 id="define/HONK_BOT"><aside class="declaration">#define </aside>HONK_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 73"/></a>
+    </h3>
+    <p>Honkbots &amp; ED-Honks</p><h3 id="define/HYGIENE_BOT"><aside class="declaration">#define </aside>HYGIENE_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L77">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 77"/></a>
+    </h3>
+    <p>Hygienebots</p><h3 id="define/MED_BOT"><aside class="declaration">#define </aside>MED_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 71"/></a>
+    </h3>
+    <p>Medibots</p><h3 id="define/MULE_BOT"><aside class="declaration">#define </aside>MULE_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L65">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 65"/></a>
+    </h3>
+    <p>MULEbots</p><h3 id="define/NEW_BORG"><aside class="declaration">#define </aside>NEW_BORG
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 83"/></a>
+    </h3>
+    <p>Alert when a new Cyborg is created.</p><h3 id="define/NEW_MODEL"><aside class="declaration">#define </aside>NEW_MODEL
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L85">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 85"/></a>
+    </h3>
+    <p>Alert when a Cyborg selects a model.</p><h3 id="define/RENAME"><aside class="declaration">#define </aside>RENAME
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L87">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 87"/></a>
+    </h3>
+    <p>Alert when a Cyborg changes their name.</p><h3 id="define/SEC_BOT"><aside class="declaration">#define </aside>SEC_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 63"/></a>
+    </h3>
+    <p>Secutritrons (Beepsky) and ED-209s</p><h3 id="define/VIBE_BOT"><aside class="declaration">#define </aside>VIBE_BOT
+            <a href="https://github.com/Skyrat-SS13/Skyrat-tg/blob/7d9468819c1040b57021c44fcc80359cf656d1f6/code/__DEFINES/robots.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;robots.dm 79"/></a>
+    </h3>
+    <p>Vibe bots</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/Skyrat-SS13/Skyrat-tg/tree/7d9468819c1040b57021c44fcc80359cf656d1f6">7d94688</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
